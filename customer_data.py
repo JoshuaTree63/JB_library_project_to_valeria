@@ -33,13 +33,8 @@ class Customer:
         self._address = address
 
     def set_email(self, your_email: Email):
-        if Email.check(your_email) is True:
+        if Email.check(your_email):
             self._email = your_email
 
 
-if __name__ == '__main__':
-    my_address = Address("israel", "Ramat Gan", "shimouni", 52214, 3, 1, 0)
-    this_is_my_email_test = Email("Joshua.Levi63@gmail.com")
-    try_me = Customer("038773321", "Joshua", my_address, this_is_my_email_test, 1983)
 
-    print(try_me, this_is_my_email_test)
